@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./App.css";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "./app/store";
 import ReservationCard from "./components/ReservationCard";
-import { addReservation } from "./features/reservationSlice";
+import {addReservation} from "./features/reservationSlice";
 import CustomerCard from "./components/CustomerCard";
-import {addFoodToCustomer} from "./features/customerSlice";
 
 function App() {
 
@@ -37,12 +36,15 @@ function App() {
                     </div>
                     <div className="reservation-input-container">
                         <input value={reservationNameInput}
-                               onChange={(e) => {setReservationNameInput(e.target.value);}} />
+                               onChange={(e) => {
+                                   setReservationNameInput(e.target.value);
+                               }}/>
                         <button onClick={() => {
-                                    handleAddReservations()
-                                    setReservationNameInput("");
-                                }}
-                        >Add</button>
+                            handleAddReservations()
+                            setReservationNameInput("");
+                        }}
+                        >Add
+                        </button>
                     </div>
                 </div>
                 <div className="customer-food-container">
@@ -53,7 +55,7 @@ function App() {
                                 name={customer.name}
                                 food={customer.food}
                                 key={customer.id}
-                                index = {customer.index}
+                                index={customer.index}
                             />
                         );
                     })}

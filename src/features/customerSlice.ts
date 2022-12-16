@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 interface Customer {
     id: string;
@@ -43,6 +43,6 @@ export const customerSlice = createSlice({
     },
 });
 
-export const { addCustomer, addFoodToCustomer, removeCustomer } = customerSlice.actions;
+export const {addCustomer, addFoodToCustomer, removeCustomer} = customerSlice.actions;
 
 export default customerSlice.reducer;

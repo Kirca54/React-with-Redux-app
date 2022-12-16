@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addFoodToCustomer, removeCustomer } from "../features/customerSlice";
-import {removeReservation} from "../features/reservationSlice";
+import React, {useState} from "react";
+import {useDispatch} from "react-redux";
+import {addFoodToCustomer, removeCustomer} from "../features/customerSlice";
 
 interface CustomerCardType {
     id: string;
@@ -10,7 +9,7 @@ interface CustomerCardType {
     index: number;
 }
 
-function CustomerCard({ id, name, food, index }: CustomerCardType) {
+function CustomerCard({id, name, food, index}: CustomerCardType) {
     const [customerFoodInput, setCustomerFoodInput] = useState("");
     const dispatch = useDispatch();
     return (
